@@ -79,6 +79,8 @@ namespace shop_management_system
                     MessageBox.Show("An email has been sent to the registered email");
                     this.Hide();
 
+                    reset_password_form rpf = new reset_password_form();
+                    rpf.Show();
                 }
 
                 con.Close();
@@ -123,6 +125,26 @@ namespace shop_management_system
                     int randomNumber = random.Next(100000, 999999);
                     //
 
+                    try
+                    {
+                        SqlDataAdapter sda_1 = new SqlDataAdapter("SELECT COUNT(*) FROM forgot_password_employee_tb WHERE employee_cnic = '" + cnic_textbox.Text + "'", con);
+                        DataTable dt_1 = new DataTable();
+                        sda_1.Fill(dt_1);
+
+                        if (int.Parse(dt_1.Rows[0][0].ToString()) > 0)
+                        {
+                            SqlCommand cmd_1 = new SqlCommand("DELETE FROM forgot_password_employee_tb WHERE employee_cnic = @cnic", con);
+                            cmd_1.Parameters.AddWithValue("@cnic", cnic_textbox.Text);
+
+                            cmd_1.ExecuteNonQuery();
+
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                     //to store the code for future validation while updating the password in next form
                     SqlCommand cmd = new SqlCommand("INSERT INTO forgot_password_employee_tb(employee_cnic, verification_code) VALUES(@cnic, @code)", con);
                     cmd.Parameters.AddWithValue("@cnic", cnic_textbox.Text);
@@ -157,8 +179,8 @@ namespace shop_management_system
                     MessageBox.Show("An email has been sent to the registered email");
                     this.Hide();
 
-                    //reset_password_form rpf = new reset_password_form(cnic_textbox.Text);
-                    //rpf.Show();
+                    reset_password_form rpf = new reset_password_form(cnic_textbox.Text);
+                    rpf.Show();
                 }
 
                 con.Close();

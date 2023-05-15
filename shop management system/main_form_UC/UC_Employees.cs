@@ -63,12 +63,13 @@ namespace shop_management_system
                     if(employee_name_text_box_main_employee_form.Text != "" || employee_address_text_box_main_employee_form.Text != "")
                     {
 
-                        SqlCommand cmd = new SqlCommand("insert into employee_tb (employee_cnic, employee_name, employee_address, employee_dob, employee_password)values(@eid, @ename, @eaddress, @edob, @epass)", con);
+                        SqlCommand cmd = new SqlCommand("insert into employee_tb (employee_cnic, employee_name, employee_address, employee_dob, employee_password, employee_email)values(@eid, @ename, @eaddress, @edob, @epass, @email)", con);
                         cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
                         cmd.Parameters.AddWithValue("@ename", employee_name_text_box_main_employee_form.Text);
                         cmd.Parameters.AddWithValue("@eaddress", employee_address_text_box_main_employee_form.Text);
                         cmd.Parameters.AddWithValue("@edob", date_select_main_employee_form.Value);
                         cmd.Parameters.AddWithValue("@epass", password_text_box_main_employee_form.Text);
+                        cmd.Parameters.AddWithValue("@email", employee_email_text_box.Text);
                         cmd.ExecuteNonQuery();
                     }
 

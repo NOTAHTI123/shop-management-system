@@ -233,6 +233,12 @@
     <Compile Include="employee_form.Designer.cs">
       <DependentUpon>employee_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="employee_form_UC\UC_billing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_form_UC\UC_billing.Designer.cs">
+      <DependentUpon>UC_billing.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgot_password_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </Compile>
     <EmbeddedResource Include="employee_form.resx">
       <DependentUpon>employee_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_form_UC\UC_billing.resx">
+      <DependentUpon>UC_billing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forgot_password_form.resx">
       <DependentUpon>forgot_password_form.cs</DependentUpon>

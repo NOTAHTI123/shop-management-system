@@ -48,6 +48,8 @@
             this.employee_name_label_main_employee_form = new System.Windows.Forms.Label();
             this.employee_page_heading = new System.Windows.Forms.Label();
             this.date_select_main_employee_form = new System.Windows.Forms.DateTimePicker();
+            this.employee_email_text_box = new System.Windows.Forms.TextBox();
+            this.employee_email_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.data_table_main_employee_form)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,7 +260,7 @@
             // 
             this.employee_page_heading.AutoSize = true;
             this.employee_page_heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_page_heading.Location = new System.Drawing.Point(384, 64);
+            this.employee_page_heading.Location = new System.Drawing.Point(452, 28);
             this.employee_page_heading.Name = "employee_page_heading";
             this.employee_page_heading.Size = new System.Drawing.Size(118, 25);
             this.employee_page_heading.TabIndex = 33;
@@ -271,10 +273,29 @@
             this.date_select_main_employee_form.Size = new System.Drawing.Size(200, 22);
             this.date_select_main_employee_form.TabIndex = 49;
             // 
+            // employee_email_text_box
+            // 
+            this.employee_email_text_box.Location = new System.Drawing.Point(737, 139);
+            this.employee_email_text_box.Name = "employee_email_text_box";
+            this.employee_email_text_box.Size = new System.Drawing.Size(140, 22);
+            this.employee_email_text_box.TabIndex = 51;
+            // 
+            // employee_email_label
+            // 
+            this.employee_email_label.AutoSize = true;
+            this.employee_email_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_email_label.Location = new System.Drawing.Point(733, 104);
+            this.employee_email_label.Name = "employee_email_label";
+            this.employee_email_label.Size = new System.Drawing.Size(144, 20);
+            this.employee_email_label.TabIndex = 50;
+            this.employee_email_label.Text = "Employee Name";
+            // 
             // UC_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.employee_email_text_box);
+            this.Controls.Add(this.employee_email_label);
             this.Controls.Add(this.date_select_main_employee_form);
             this.Controls.Add(this.data_table_main_employee_form);
             this.Controls.Add(this.employee_phone_text_box_main_employee_form);
@@ -320,5 +341,7 @@
         private System.Windows.Forms.Label employee_name_label_main_employee_form;
         private System.Windows.Forms.Label employee_page_heading;
         private System.Windows.Forms.DateTimePicker date_select_main_employee_form;
+        private System.Windows.Forms.TextBox employee_email_text_box;
+        private System.Windows.Forms.Label employee_email_label;
     }
 }

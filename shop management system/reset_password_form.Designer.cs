@@ -38,11 +38,11 @@
             this.verification_code_label = new System.Windows.Forms.Label();
             this.confirm_button = new System.Windows.Forms.Button();
             this.gb1 = new System.Windows.Forms.GroupBox();
+            this.update_button = new System.Windows.Forms.Button();
             this.re_enter_password_text_box = new System.Windows.Forms.TextBox();
             this.re_enter_password_label = new System.Windows.Forms.Label();
             this.new_password_text_box = new System.Windows.Forms.TextBox();
             this.new_password_label = new System.Windows.Forms.Label();
-            this.update_button = new System.Windows.Forms.Button();
             this.gb2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.gb1.SuspendLayout();
@@ -53,9 +53,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.login_page_label);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 535);
+            this.panel1.Size = new System.Drawing.Size(185, 539);
             this.panel1.TabIndex = 4;
             // 
             // login_page_label
@@ -96,7 +96,7 @@
             // 
             // verification_code_text_box
             // 
-            this.verification_code_text_box.Location = new System.Drawing.Point(171, 58);
+            this.verification_code_text_box.Location = new System.Drawing.Point(212, 58);
             this.verification_code_text_box.Name = "verification_code_text_box";
             this.verification_code_text_box.Size = new System.Drawing.Size(150, 22);
             this.verification_code_text_box.TabIndex = 12;
@@ -113,7 +113,7 @@
             // 
             // confirm_button
             // 
-            this.confirm_button.Location = new System.Drawing.Point(203, 98);
+            this.confirm_button.Location = new System.Drawing.Point(238, 97);
             this.confirm_button.Name = "confirm_button";
             this.confirm_button.Size = new System.Drawing.Size(83, 28);
             this.confirm_button.TabIndex = 17;
@@ -134,6 +134,16 @@
             this.gb1.TabIndex = 18;
             this.gb1.TabStop = false;
             this.gb1.Visible = false;
+            // 
+            // update_button
+            // 
+            this.update_button.Location = new System.Drawing.Point(203, 128);
+            this.update_button.Name = "update_button";
+            this.update_button.Size = new System.Drawing.Size(83, 28);
+            this.update_button.TabIndex = 21;
+            this.update_button.Text = "Update";
+            this.update_button.UseVisualStyleBackColor = true;
+            this.update_button.Click += new System.EventHandler(this.update_button_Click);
             // 
             // re_enter_password_text_box
             // 
@@ -168,16 +178,6 @@
             this.new_password_label.Size = new System.Drawing.Size(139, 18);
             this.new_password_label.TabIndex = 17;
             this.new_password_label.Text = "New password : ";
-            // 
-            // update_button
-            // 
-            this.update_button.Location = new System.Drawing.Point(203, 128);
-            this.update_button.Name = "update_button";
-            this.update_button.Size = new System.Drawing.Size(83, 28);
-            this.update_button.TabIndex = 21;
-            this.update_button.Text = "Update";
-            this.update_button.UseVisualStyleBackColor = true;
-            this.update_button.Click += new System.EventHandler(this.update_button_Click);
             // 
             // gb2
             // 
