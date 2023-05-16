@@ -1,0 +1,3 @@
+*Added email support for forgot password
+*Made a seperate form for reset password
+*Added authentication for forgot password
