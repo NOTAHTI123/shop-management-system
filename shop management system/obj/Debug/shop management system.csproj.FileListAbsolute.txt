@@ -1,0 +1,62 @@
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\shop management system.exe.config
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\shop management system.exe
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\shop management system.pdb
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.AssemblyReference.cache
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.SuggestedBindingRedirects.cache
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.main_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.Properties.Resources.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_Dashboard.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.GenerateResource.cache
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.CoreCompileInputs.cache
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.CopyComplete
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.exe
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.pdb
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\RestSharp.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Buffers.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.CodeDom.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Data.Odbc.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Data.OleDb.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Data.SqlClient.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Drawing.Common.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.IO.Packaging.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.IO.Ports.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Memory.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.AccessControl.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Permissions.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\bin\Debug\System.Threading.AccessControl.xml
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop management system.csproj.Fody.CopyLocal.cache
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_Employees.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_Product.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_Customers.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_Analytics.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.employee_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.UC_employee_profile.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.main_form_UC.UC_admin_profile.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.signup_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.forgot_password_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.reset_password_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.signup_options_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.employee_form_UC.UC_Billing_emp.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.login_form_employee.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.login_form_admin.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.main_form_UC.UC_admin.resources
