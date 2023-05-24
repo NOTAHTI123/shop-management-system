@@ -73,30 +73,33 @@
             this.data_table_main_employee_form.EnableHeadersVisualStyles = false;
             this.data_table_main_employee_form.HeaderBgColor = System.Drawing.Color.MidnightBlue;
             this.data_table_main_employee_form.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.data_table_main_employee_form.Location = new System.Drawing.Point(145, 309);
+            this.data_table_main_employee_form.Location = new System.Drawing.Point(109, 251);
+            this.data_table_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_table_main_employee_form.Name = "data_table_main_employee_form";
             this.data_table_main_employee_form.ReadOnly = true;
             this.data_table_main_employee_form.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.data_table_main_employee_form.RowHeadersWidth = 51;
             this.data_table_main_employee_form.RowTemplate.Height = 24;
-            this.data_table_main_employee_form.Size = new System.Drawing.Size(705, 228);
+            this.data_table_main_employee_form.Size = new System.Drawing.Size(529, 185);
             this.data_table_main_employee_form.TabIndex = 48;
             this.data_table_main_employee_form.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_table_main_employee_form_CellContentClick);
             // 
             // employee_phone_text_box_main_employee_form
             // 
-            this.employee_phone_text_box_main_employee_form.Location = new System.Drawing.Point(352, 209);
+            this.employee_phone_text_box_main_employee_form.Location = new System.Drawing.Point(264, 170);
+            this.employee_phone_text_box_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employee_phone_text_box_main_employee_form.Name = "employee_phone_text_box_main_employee_form";
-            this.employee_phone_text_box_main_employee_form.Size = new System.Drawing.Size(140, 22);
+            this.employee_phone_text_box_main_employee_form.Size = new System.Drawing.Size(106, 20);
             this.employee_phone_text_box_main_employee_form.TabIndex = 47;
             // 
             // phone_label_main_employee_form
             // 
             this.phone_label_main_employee_form.AutoSize = true;
             this.phone_label_main_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone_label_main_employee_form.Location = new System.Drawing.Point(348, 180);
+            this.phone_label_main_employee_form.Location = new System.Drawing.Point(261, 146);
+            this.phone_label_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phone_label_main_employee_form.Name = "phone_label_main_employee_form";
-            this.phone_label_main_employee_form.Size = new System.Drawing.Size(61, 20);
+            this.phone_label_main_employee_form.Size = new System.Drawing.Size(54, 17);
             this.phone_label_main_employee_form.TabIndex = 46;
             this.phone_label_main_employee_form.Text = "Phone";
             // 
@@ -111,17 +114,17 @@
             this.add_button_main_employee_form.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_button_main_employee_form.BackgroundImage")));
             this.add_button_main_employee_form.ButtonText = "Add";
             this.add_button_main_employee_form.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_button_main_employee_form.ForeColor = System.Drawing.Color.SeaGreen;
             this.add_button_main_employee_form.IdleBorderThickness = 1;
             this.add_button_main_employee_form.IdleCornerRadius = 20;
             this.add_button_main_employee_form.IdleFillColor = System.Drawing.Color.MidnightBlue;
             this.add_button_main_employee_form.IdleForecolor = System.Drawing.SystemColors.ControlLightLight;
             this.add_button_main_employee_form.IdleLineColor = System.Drawing.SystemColors.ControlLightLight;
-            this.add_button_main_employee_form.Location = new System.Drawing.Point(152, 250);
-            this.add_button_main_employee_form.Margin = new System.Windows.Forms.Padding(5);
+            this.add_button_main_employee_form.Location = new System.Drawing.Point(114, 203);
+            this.add_button_main_employee_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.add_button_main_employee_form.Name = "add_button_main_employee_form";
-            this.add_button_main_employee_form.Size = new System.Drawing.Size(133, 51);
+            this.add_button_main_employee_form.Size = new System.Drawing.Size(100, 41);
             this.add_button_main_employee_form.TabIndex = 45;
             this.add_button_main_employee_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_button_main_employee_form.Click += new System.EventHandler(this.add_button_main_employee_form_Click);
@@ -137,17 +140,17 @@
             this.delete_button_main_employee_form.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_button_main_employee_form.BackgroundImage")));
             this.delete_button_main_employee_form.ButtonText = "Delete";
             this.delete_button_main_employee_form.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delete_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_button_main_employee_form.ForeColor = System.Drawing.Color.SeaGreen;
             this.delete_button_main_employee_form.IdleBorderThickness = 1;
             this.delete_button_main_employee_form.IdleCornerRadius = 20;
             this.delete_button_main_employee_form.IdleFillColor = System.Drawing.Color.MidnightBlue;
             this.delete_button_main_employee_form.IdleForecolor = System.Drawing.SystemColors.ControlLightLight;
             this.delete_button_main_employee_form.IdleLineColor = System.Drawing.SystemColors.ControlLightLight;
-            this.delete_button_main_employee_form.Location = new System.Drawing.Point(512, 250);
-            this.delete_button_main_employee_form.Margin = new System.Windows.Forms.Padding(5);
+            this.delete_button_main_employee_form.Location = new System.Drawing.Point(384, 203);
+            this.delete_button_main_employee_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delete_button_main_employee_form.Name = "delete_button_main_employee_form";
-            this.delete_button_main_employee_form.Size = new System.Drawing.Size(133, 51);
+            this.delete_button_main_employee_form.Size = new System.Drawing.Size(100, 41);
             this.delete_button_main_employee_form.TabIndex = 44;
             this.delete_button_main_employee_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.delete_button_main_employee_form.Click += new System.EventHandler(this.delete_button_main_employee_form_Click);
@@ -163,56 +166,61 @@
             this.edit_button_main_employee_form.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("edit_button_main_employee_form.BackgroundImage")));
             this.edit_button_main_employee_form.ButtonText = "Edit";
             this.edit_button_main_employee_form.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_button_main_employee_form.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit_button_main_employee_form.ForeColor = System.Drawing.Color.SeaGreen;
             this.edit_button_main_employee_form.IdleBorderThickness = 1;
             this.edit_button_main_employee_form.IdleCornerRadius = 20;
             this.edit_button_main_employee_form.IdleFillColor = System.Drawing.Color.MidnightBlue;
             this.edit_button_main_employee_form.IdleForecolor = System.Drawing.SystemColors.ControlLightLight;
             this.edit_button_main_employee_form.IdleLineColor = System.Drawing.SystemColors.ControlLightLight;
-            this.edit_button_main_employee_form.Location = new System.Drawing.Point(333, 250);
-            this.edit_button_main_employee_form.Margin = new System.Windows.Forms.Padding(5);
+            this.edit_button_main_employee_form.Location = new System.Drawing.Point(250, 203);
+            this.edit_button_main_employee_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edit_button_main_employee_form.Name = "edit_button_main_employee_form";
-            this.edit_button_main_employee_form.Size = new System.Drawing.Size(133, 51);
+            this.edit_button_main_employee_form.Size = new System.Drawing.Size(100, 41);
             this.edit_button_main_employee_form.TabIndex = 43;
             this.edit_button_main_employee_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.edit_button_main_employee_form.Click += new System.EventHandler(this.edit_button_main_employee_form_Click);
             // 
             // employee_idtext_box_main_employee_form
             // 
-            this.employee_idtext_box_main_employee_form.Location = new System.Drawing.Point(145, 209);
+            this.employee_idtext_box_main_employee_form.Location = new System.Drawing.Point(109, 170);
+            this.employee_idtext_box_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employee_idtext_box_main_employee_form.Name = "employee_idtext_box_main_employee_form";
-            this.employee_idtext_box_main_employee_form.Size = new System.Drawing.Size(140, 22);
+            this.employee_idtext_box_main_employee_form.Size = new System.Drawing.Size(106, 20);
             this.employee_idtext_box_main_employee_form.TabIndex = 42;
             // 
             // password_text_box_main_employee_form
             // 
-            this.password_text_box_main_employee_form.Location = new System.Drawing.Point(558, 139);
+            this.password_text_box_main_employee_form.Location = new System.Drawing.Point(418, 113);
+            this.password_text_box_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.password_text_box_main_employee_form.Name = "password_text_box_main_employee_form";
-            this.password_text_box_main_employee_form.Size = new System.Drawing.Size(140, 22);
+            this.password_text_box_main_employee_form.Size = new System.Drawing.Size(106, 20);
             this.password_text_box_main_employee_form.TabIndex = 41;
             // 
             // employee_address_text_box_main_employee_form
             // 
-            this.employee_address_text_box_main_employee_form.Location = new System.Drawing.Point(352, 139);
+            this.employee_address_text_box_main_employee_form.Location = new System.Drawing.Point(264, 113);
+            this.employee_address_text_box_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employee_address_text_box_main_employee_form.Name = "employee_address_text_box_main_employee_form";
-            this.employee_address_text_box_main_employee_form.Size = new System.Drawing.Size(140, 22);
+            this.employee_address_text_box_main_employee_form.Size = new System.Drawing.Size(106, 20);
             this.employee_address_text_box_main_employee_form.TabIndex = 40;
             // 
             // employee_name_text_box_main_employee_form
             // 
-            this.employee_name_text_box_main_employee_form.Location = new System.Drawing.Point(145, 139);
+            this.employee_name_text_box_main_employee_form.Location = new System.Drawing.Point(109, 113);
+            this.employee_name_text_box_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employee_name_text_box_main_employee_form.Name = "employee_name_text_box_main_employee_form";
-            this.employee_name_text_box_main_employee_form.Size = new System.Drawing.Size(140, 22);
+            this.employee_name_text_box_main_employee_form.Size = new System.Drawing.Size(106, 20);
             this.employee_name_text_box_main_employee_form.TabIndex = 39;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(492, 209);
+            this.label1.Location = new System.Drawing.Point(369, 170);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 20);
+            this.label1.Size = new System.Drawing.Size(121, 17);
             this.label1.TabIndex = 38;
             this.label1.Text = "Employee DOB:";
             // 
@@ -220,9 +228,10 @@
             // 
             this.employee_id_label_main_employee_form.AutoSize = true;
             this.employee_id_label_main_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_id_label_main_employee_form.Location = new System.Drawing.Point(141, 180);
+            this.employee_id_label_main_employee_form.Location = new System.Drawing.Point(106, 146);
+            this.employee_id_label_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_id_label_main_employee_form.Name = "employee_id_label_main_employee_form";
-            this.employee_id_label_main_employee_form.Size = new System.Drawing.Size(115, 20);
+            this.employee_id_label_main_employee_form.Size = new System.Drawing.Size(98, 17);
             this.employee_id_label_main_employee_form.TabIndex = 37;
             this.employee_id_label_main_employee_form.Text = "Employee ID";
             // 
@@ -230,9 +239,10 @@
             // 
             this.employee_password_label_main_employee_form.AutoSize = true;
             this.employee_password_label_main_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_password_label_main_employee_form.Location = new System.Drawing.Point(554, 104);
+            this.employee_password_label_main_employee_form.Location = new System.Drawing.Point(416, 84);
+            this.employee_password_label_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_password_label_main_employee_form.Name = "employee_password_label_main_employee_form";
-            this.employee_password_label_main_employee_form.Size = new System.Drawing.Size(91, 20);
+            this.employee_password_label_main_employee_form.Size = new System.Drawing.Size(77, 17);
             this.employee_password_label_main_employee_form.TabIndex = 36;
             this.employee_password_label_main_employee_form.Text = "Password";
             // 
@@ -240,9 +250,10 @@
             // 
             this.employee_address_label_main_employee_form.AutoSize = true;
             this.employee_address_label_main_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_address_label_main_employee_form.Location = new System.Drawing.Point(348, 104);
+            this.employee_address_label_main_employee_form.Location = new System.Drawing.Point(261, 84);
+            this.employee_address_label_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_address_label_main_employee_form.Name = "employee_address_label_main_employee_form";
-            this.employee_address_label_main_employee_form.Size = new System.Drawing.Size(78, 20);
+            this.employee_address_label_main_employee_form.Size = new System.Drawing.Size(67, 17);
             this.employee_address_label_main_employee_form.TabIndex = 35;
             this.employee_address_label_main_employee_form.Text = "Address";
             // 
@@ -250,9 +261,10 @@
             // 
             this.employee_name_label_main_employee_form.AutoSize = true;
             this.employee_name_label_main_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_name_label_main_employee_form.Location = new System.Drawing.Point(141, 104);
+            this.employee_name_label_main_employee_form.Location = new System.Drawing.Point(106, 84);
+            this.employee_name_label_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_name_label_main_employee_form.Name = "employee_name_label_main_employee_form";
-            this.employee_name_label_main_employee_form.Size = new System.Drawing.Size(144, 20);
+            this.employee_name_label_main_employee_form.Size = new System.Drawing.Size(124, 17);
             this.employee_name_label_main_employee_form.TabIndex = 34;
             this.employee_name_label_main_employee_form.Text = "Employee Name";
             // 
@@ -260,39 +272,43 @@
             // 
             this.employee_page_heading.AutoSize = true;
             this.employee_page_heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_page_heading.Location = new System.Drawing.Point(452, 28);
+            this.employee_page_heading.Location = new System.Drawing.Point(339, 23);
+            this.employee_page_heading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_page_heading.Name = "employee_page_heading";
-            this.employee_page_heading.Size = new System.Drawing.Size(118, 25);
+            this.employee_page_heading.Size = new System.Drawing.Size(96, 20);
             this.employee_page_heading.TabIndex = 33;
             this.employee_page_heading.Text = "Employees";
             // 
             // date_select_main_employee_form
             // 
-            this.date_select_main_employee_form.Location = new System.Drawing.Point(650, 209);
+            this.date_select_main_employee_form.Location = new System.Drawing.Point(488, 170);
+            this.date_select_main_employee_form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.date_select_main_employee_form.Name = "date_select_main_employee_form";
-            this.date_select_main_employee_form.Size = new System.Drawing.Size(200, 22);
+            this.date_select_main_employee_form.Size = new System.Drawing.Size(151, 20);
             this.date_select_main_employee_form.TabIndex = 49;
             // 
             // employee_email_text_box
             // 
-            this.employee_email_text_box.Location = new System.Drawing.Point(737, 139);
+            this.employee_email_text_box.Location = new System.Drawing.Point(553, 113);
+            this.employee_email_text_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employee_email_text_box.Name = "employee_email_text_box";
-            this.employee_email_text_box.Size = new System.Drawing.Size(140, 22);
+            this.employee_email_text_box.Size = new System.Drawing.Size(106, 20);
             this.employee_email_text_box.TabIndex = 51;
             // 
             // employee_email_label
             // 
             this.employee_email_label.AutoSize = true;
             this.employee_email_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_email_label.Location = new System.Drawing.Point(733, 104);
+            this.employee_email_label.Location = new System.Drawing.Point(550, 84);
+            this.employee_email_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employee_email_label.Name = "employee_email_label";
-            this.employee_email_label.Size = new System.Drawing.Size(144, 20);
+            this.employee_email_label.Size = new System.Drawing.Size(122, 17);
             this.employee_email_label.TabIndex = 50;
-            this.employee_email_label.Text = "Employee Name";
+            this.employee_email_label.Text = "Employee Email";
             // 
             // UC_Employees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.employee_email_text_box);
             this.Controls.Add(this.employee_email_label);
@@ -313,8 +329,9 @@
             this.Controls.Add(this.employee_address_label_main_employee_form);
             this.Controls.Add(this.employee_name_label_main_employee_form);
             this.Controls.Add(this.employee_page_heading);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_Employees";
-            this.Size = new System.Drawing.Size(959, 602);
+            this.Size = new System.Drawing.Size(719, 489);
             this.Load += new System.EventHandler(this.UC_Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_table_main_employee_form)).EndInit();
             this.ResumeLayout(false);

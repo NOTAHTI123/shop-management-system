@@ -233,11 +233,11 @@
     <Compile Include="employee_form.Designer.cs">
       <DependentUpon>employee_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="employee_form_UC\UC_billing.cs">
+    <Compile Include="employee_form_UC\UC_Billing_emp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="employee_form_UC\UC_billing.Designer.cs">
-      <DependentUpon>UC_billing.cs</DependentUpon>
+    <Compile Include="employee_form_UC\UC_Billing_emp.Designer.cs">
+      <DependentUpon>UC_Billing_emp.cs</DependentUpon>
     </Compile>
     <Compile Include="forgot_password_form.cs">
       <SubType>Form</SubType>
@@ -245,17 +245,29 @@
     <Compile Include="forgot_password_form.Designer.cs">
       <DependentUpon>forgot_password_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="login_form.cs">
+    <Compile Include="login_form_employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login_form.Designer.cs">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <Compile Include="login_form_employee.Designer.cs">
+      <DependentUpon>login_form_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_form_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_form_admin.Designer.cs">
+      <DependentUpon>login_form_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main_form.Designer.cs">
       <DependentUpon>main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_form_UC\UC_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_form_UC\UC_admin.Designer.cs">
+      <DependentUpon>UC_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="main_form_UC\UC_admin_profile.cs">
       <SubType>UserControl</SubType>
@@ -322,17 +334,23 @@
     <EmbeddedResource Include="employee_form.resx">
       <DependentUpon>employee_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employee_form_UC\UC_billing.resx">
-      <DependentUpon>UC_billing.cs</DependentUpon>
+    <EmbeddedResource Include="employee_form_UC\UC_Billing_emp.resx">
+      <DependentUpon>UC_Billing_emp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forgot_password_form.resx">
       <DependentUpon>forgot_password_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login_form.resx">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <EmbeddedResource Include="login_form_employee.resx">
+      <DependentUpon>login_form_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_form_admin.resx">
+      <DependentUpon>login_form_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_form_UC\UC_admin.resx">
+      <DependentUpon>UC_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form_UC\UC_admin_profile.resx">
       <DependentUpon>UC_admin_profile.cs</DependentUpon>

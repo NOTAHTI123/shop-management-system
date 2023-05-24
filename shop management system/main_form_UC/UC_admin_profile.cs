@@ -18,6 +18,7 @@ namespace shop_management_system.main_form_UC
         public UC_admin_profile()
         {
             InitializeComponent();
+            //update();
         }
 
         public UC_admin_profile(string cnic_passed, string name_passed)
@@ -27,17 +28,23 @@ namespace shop_management_system.main_form_UC
             cnic_value_label.Text = cnic_passed;
             name_value_label.Text = name_passed;
 
+            update();
+        }
+
+        private void update()
+        {
             //Fetching name and address
 
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT admin_address FROM admin_tb where admin_cnic = '" + cnic_passed + "'", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT admin_address FROM admin_tb where admin_cnic = '" + cnic_value_label.Text + "'", con);
 
             DataTable dt = new DataTable();
 
             sda.Fill(dt);
 
             address_value_label.Text = dt.Rows[0][0].ToString();
+            con.Close();
         }
-
         private void UC_admin_profile_Load(object sender, EventArgs e)
         {
 

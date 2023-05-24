@@ -57,8 +57,9 @@ namespace shop_management_system
 
 
             //The following code is to automatically open dashboard user control on login
-            UserControl ucdash = new UC_Dashboard();
-            addUserControl(ucdash);
+            UserControl ucprofile = new UC_admin_profile();
+            addUserControl(ucprofile);
+            ActivateButton(profile_button, RGBColors.color1);
             //
         }
 
@@ -126,7 +127,7 @@ namespace shop_management_system
         private void dashboard_button_Click(object sender, EventArgs e)
         {
             reset();
-            ActivateButton(sender, RGBColors.color1); //To change color
+            ActivateButton(sender, RGBColors.color2); //To change color
 
             UC_Dashboard ucd = new UC_Dashboard();
             addUserControl(ucd);
@@ -134,7 +135,7 @@ namespace shop_management_system
         private void employee_button_Click(object sender, EventArgs e)
         {
             reset();
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.color4);
 
             UC_Employees uce = new UC_Employees();
             addUserControl(uce);
@@ -144,7 +145,7 @@ namespace shop_management_system
         private void products_button_Click_1(object sender, EventArgs e)
         {
             reset();
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color6);
 
             UC_Product ucp = new UC_Product();
             addUserControl(ucp);
@@ -154,7 +155,7 @@ namespace shop_management_system
         private void customers_button_Click_1(object sender, EventArgs e)
         {
             reset();
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, RGBColors.color5);
 
             UC_Customers ucp = new UC_Customers();
             addUserControl(ucp);
@@ -163,7 +164,7 @@ namespace shop_management_system
         private void analytics_button_Click(object sender, EventArgs e)
         {
             reset();
-            ActivateButton(sender, RGBColors.color5);
+            ActivateButton(sender, RGBColors.color3);
 
             UC_Analytics uca = new UC_Analytics();
             addUserControl(uca);
@@ -205,7 +206,7 @@ namespace shop_management_system
         private void logout_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            login_form lf = new login_form();
+            login_form_employee lf = new login_form_employee();
             lf.Show();
         }
 
@@ -219,6 +220,14 @@ namespace shop_management_system
             addUserControl(uC_Admin_Profile);
 
 
+        }
+
+        private void admin_button_Click(object sender, EventArgs e)
+        {
+            reset();
+            UC_admin uca = new UC_admin();
+            ActivateButton(sender, RGBColors.color5);
+            addUserControl(uca);
         }
 
         private void top_panel_Paint(object sender, PaintEventArgs e)

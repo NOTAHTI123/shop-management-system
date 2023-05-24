@@ -56,7 +56,7 @@ namespace shop_management_system
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            login_form lf = new login_form();
+            login_form_employee lf = new login_form_employee();
             this.Hide();
             lf.Show();
         }

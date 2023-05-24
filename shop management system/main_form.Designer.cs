@@ -40,6 +40,7 @@
             this.top_panel = new System.Windows.Forms.Panel();
             this.close_button = new FontAwesome.Sharp.IconButton();
             this.uc_panel = new System.Windows.Forms.Panel();
+            this.admin_button = new FontAwesome.Sharp.IconButton();
             this.main_panel.SuspendLayout();
             this.main_button_panel.SuspendLayout();
             this.top_panel.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // main_button_panel
             // 
+            this.main_button_panel.Controls.Add(this.admin_button);
             this.main_button_panel.Controls.Add(this.logout_button);
             this.main_button_panel.Controls.Add(this.employee_button);
             this.main_button_panel.Controls.Add(this.products_button);
@@ -236,6 +238,25 @@
             this.uc_panel.TabIndex = 2;
             this.uc_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.uc_panel_Paint);
             // 
+            // admin_button
+            // 
+            this.admin_button.FlatAppearance.BorderSize = 0;
+            this.admin_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.admin_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.admin_button.IconChar = FontAwesome.Sharp.IconChar.Person;
+            this.admin_button.IconColor = System.Drawing.Color.White;
+            this.admin_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.admin_button.IconSize = 36;
+            this.admin_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.admin_button.Location = new System.Drawing.Point(3, 308);
+            this.admin_button.Name = "admin_button";
+            this.admin_button.Size = new System.Drawing.Size(184, 38);
+            this.admin_button.TabIndex = 6;
+            this.admin_button.Text = "Admins";
+            this.admin_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.admin_button.UseVisualStyleBackColor = true;
+            this.admin_button.Click += new System.EventHandler(this.admin_button_Click);
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,6 +290,7 @@
         private FontAwesome.Sharp.IconButton close_button;
         private System.Windows.Forms.Panel main_button_panel;
         private System.Windows.Forms.Panel uc_panel;
+        private FontAwesome.Sharp.IconButton admin_button;
     }
 }
 

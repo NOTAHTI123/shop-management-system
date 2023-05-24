@@ -119,9 +119,9 @@
             // 
             this.top_panel.BackColor = System.Drawing.Color.MidnightBlue;
             this.top_panel.Controls.Add(this.close_button);
-            this.top_panel.Location = new System.Drawing.Point(218, -1);
+            this.top_panel.Location = new System.Drawing.Point(208, -1);
             this.top_panel.Name = "top_panel";
-            this.top_panel.Size = new System.Drawing.Size(962, 42);
+            this.top_panel.Size = new System.Drawing.Size(972, 42);
             this.top_panel.TabIndex = 4;
             this.top_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.top_panel_Paint);
             // 

@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using shop_management_system.employee_form_UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,9 @@ namespace shop_management_system
             sda.Fill(dt);
 
             profile_button.Text = dt.Rows[0][0].ToString();
+            UC_employee_profile ucp = new UC_employee_profile(cnic, profile_button.Text);
+            addUserControl(ucp);
+            ActivateButton(profile_button, RGBColors.color1);
 
 
         }
@@ -59,16 +63,20 @@ namespace shop_management_system
             reset();
             UC_employee_profile ucp = new UC_employee_profile(cnic, profile_button.Text);
             addUserControl(ucp);
+            ActivateButton(sender, RGBColors.color1);
         }
 
         private void top_panel_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void products_button_Click(object sender, EventArgs e) //billing button
         {
-
+            reset();
+            UC_Billing_emp ube = new UC_Billing_emp(cnic);
+            addUserControl(ube);
+            ActivateButton(sender, RGBColors.color2);
         }
 
         private void uc_panel_Paint(object sender, PaintEventArgs e)
@@ -119,7 +127,7 @@ namespace shop_management_system
 
         private void logout_button_Click(object sender, EventArgs e)
         {
-            login_form lf = new login_form();
+            login_form_employee lf = new login_form_employee();
             lf.Show();
             this.Hide();
         }
