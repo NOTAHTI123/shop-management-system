@@ -43,7 +43,7 @@ namespace shop_management_system
 
         private void add_button_main_Customer_form_Click(object sender, EventArgs e)
         {
-            if (phone_text_box_main_Customer_form.Text == "" || Customer_cnic_text_box_main_Customer_form.Text == "")
+            if (phone_text_box_main_Customer_form.Text == "" || Customer_cnic_text_box_main_Customer_form.Text == "" || phone_text_box_main_Customer_form.Text == "" || Customer_cnic_text_box_main_Customer_form.Text == "")
             {
                 MessageBox.Show("Please Fill out all the fields");
             }
@@ -54,29 +54,49 @@ namespace shop_management_system
                 {
                     con.Open();
 
-                    if(Customer_name_text_box_main_Customer_form.Text != "" && Customer_address_text_box_main_Customer_form.Text != "")
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM customer_tb WHERE customer_cnic = '" + Customer_cnic_text_box_main_Customer_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
                     {
-                        SqlCommand cmd = new SqlCommand("insert into customer_tb (customer_cnic, customer_name, customer_address)values(@cid, @cname , @caddress)", con);
+                        if (Customer_name_text_box_main_Customer_form.Text != "" && Customer_address_text_box_main_Customer_form.Text != "")
+                        {
+                            SqlCommand cmd = new SqlCommand("insert into customer_tb (customer_cnic, customer_name, customer_address)values(@cid, @cname , @caddress)", con);
 
-                        cmd.Parameters.AddWithValue("@cname", Customer_name_text_box_main_Customer_form.Text);
-                        cmd.Parameters.AddWithValue("@cid", Customer_cnic_text_box_main_Customer_form.Text);
-                        cmd.Parameters.AddWithValue("@caddress", Customer_address_text_box_main_Customer_form.Text);
-                        cmd.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
+                            cmd.Parameters.AddWithValue("@cname", Customer_name_text_box_main_Customer_form.Text);
+                            cmd.Parameters.AddWithValue("@cid", Customer_cnic_text_box_main_Customer_form.Text);
+                            cmd.Parameters.AddWithValue("@caddress", Customer_address_text_box_main_Customer_form.Text);
+                            cmd.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
 
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Customer added successfully");
+                            cmd.ExecuteNonQuery();
 
+
+                            SqlCommand cmd_2 = new SqlCommand("INSERT INTO customer_phone(customer_id, phone)VALUES(@c_id, @cphone)", con);
+                            cmd_2.Parameters.AddWithValue("@c_id", Customer_cnic_text_box_main_Customer_form.Text);
+                            cmd_2.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
+
+                            cmd_2.ExecuteNonQuery();
+
+
+                            MessageBox.Show("Customer added successfully");
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("The CNIC already exists");
                     }
 
 
                     //fetch customer id to insert customer phone
  //FK used
 
-                    SqlCommand cmd_2 = new SqlCommand("INSERT INTO customer_phone(customer_id, phone)VALUES(@c_id, @cphone)", con);
-                    cmd_2.Parameters.AddWithValue("@c_id", Customer_cnic_text_box_main_Customer_form.Text);
-                    cmd_2.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
 
-                    cmd_2.ExecuteNonQuery();
 
                     con.Close();
                     update_data_table();
@@ -84,7 +104,7 @@ namespace shop_management_system
 
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("The CNIC already exists");
+                    MessageBox.Show(Ex.Message);
                 }
             }
         }
@@ -100,14 +120,31 @@ namespace shop_management_system
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("update customer_tb set customer_name = @cname, customer_address = @caddress, customer_phone = @cphone  where customer_cnic=@cid", con);
-                    cmd.Parameters.AddWithValue("@cid", Customer_cnic_text_box_main_Customer_form.Text);
-                    cmd.Parameters.AddWithValue("@cname", Customer_name_text_box_main_Customer_form.Text);
-                    cmd.Parameters.AddWithValue("@caddress", Customer_address_text_box_main_Customer_form.Text);
-                    cmd.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Customer's data edited successfully");
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM customer_tb WHERE customer_cnic = '" + Customer_cnic_text_box_main_Customer_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd = new SqlCommand("update customer_tb set customer_name = @cname, customer_address = @caddress, customer_phone = @cphone  where customer_cnic=@cid", con);
+                        cmd.Parameters.AddWithValue("@cid", Customer_cnic_text_box_main_Customer_form.Text);
+                        cmd.Parameters.AddWithValue("@cname", Customer_name_text_box_main_Customer_form.Text);
+                        cmd.Parameters.AddWithValue("@caddress", Customer_address_text_box_main_Customer_form.Text);
+                        cmd.Parameters.AddWithValue("@cphone", phone_text_box_main_Customer_form.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Customer's data edited successfully");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("The CNIC was not found");
+                    }
                     con.Close();
 
                     update_data_table();
@@ -132,21 +169,36 @@ namespace shop_management_system
                 {
                     con.Open();
 
-                    SqlCommand cmd_2 = new SqlCommand("DELETE FROM customer_phone where customer_id = @c_id", con);
-                    cmd_2.Parameters.Add("@c_id", Customer_cnic_text_box_main_Customer_form.Text);
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM customer_tb WHERE customer_cnic = '" + Customer_cnic_text_box_main_Customer_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
-                    cmd_2.ExecuteNonQuery();
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd_2 = new SqlCommand("DELETE FROM customer_phone where customer_id = @c_id", con);
+                        cmd_2.Parameters.Add("@c_id", Customer_cnic_text_box_main_Customer_form.Text);
+
+                        cmd_2.ExecuteNonQuery();
 
 
-                    SqlCommand cmd = new SqlCommand("delete from customer_tb where customer_cnic=@ciid", con);
-                    cmd.Parameters.AddWithValue("@ciid", Customer_cnic_text_box_main_Customer_form.Text);
+                        SqlCommand cmd = new SqlCommand("delete from customer_tb where customer_cnic=@ciid", con);
+                        cmd.Parameters.AddWithValue("@ciid", Customer_cnic_text_box_main_Customer_form.Text);
+                        cmd.ExecuteNonQuery();
+
+
+
+                        MessageBox.Show("Customer's data deleted successfully");
+
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("The CNIC doesn't exist");
+                    }
 
  
-                    cmd.ExecuteNonQuery();
-
-
-
-                    MessageBox.Show("Customer's data deleted successfully");
                     //MessageBox.Show(Customer_cnic_text_box_main_Customer_form.Text);
                     con.Close();
 

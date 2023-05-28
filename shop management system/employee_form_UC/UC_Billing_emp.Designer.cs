@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Billing_emp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.billing_label_main_billing_employee_form = new System.Windows.Forms.Label();
             this.customer_id_label_main_billing_employee_form = new System.Windows.Forms.Label();
             this.products_bill_label_main_billing_employee_form = new System.Windows.Forms.Label();
@@ -239,7 +239,7 @@
             this.confirm_bill_button_main_billing_employee_form.IdleFillColor = System.Drawing.Color.MidnightBlue;
             this.confirm_bill_button_main_billing_employee_form.IdleForecolor = System.Drawing.SystemColors.ControlLightLight;
             this.confirm_bill_button_main_billing_employee_form.IdleLineColor = System.Drawing.SystemColors.ControlLightLight;
-            this.confirm_bill_button_main_billing_employee_form.Location = new System.Drawing.Point(570, 391);
+            this.confirm_bill_button_main_billing_employee_form.Location = new System.Drawing.Point(613, 440);
             this.confirm_bill_button_main_billing_employee_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.confirm_bill_button_main_billing_employee_form.Name = "confirm_bill_button_main_billing_employee_form";
             this.confirm_bill_button_main_billing_employee_form.Size = new System.Drawing.Size(92, 45);
@@ -300,7 +300,7 @@
             // 
             this.total_money_text_main_billing_employee_form.AutoSize = true;
             this.total_money_text_main_billing_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_money_text_main_billing_employee_form.Location = new System.Drawing.Point(436, 400);
+            this.total_money_text_main_billing_employee_form.Location = new System.Drawing.Point(570, 457);
             this.total_money_text_main_billing_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.total_money_text_main_billing_employee_form.Name = "total_money_text_main_billing_employee_form";
             this.total_money_text_main_billing_employee_form.Size = new System.Drawing.Size(20, 17);
@@ -311,7 +311,7 @@
             // 
             this.total_label_main_billing_employee_form.AutoSize = true;
             this.total_label_main_billing_employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_label_main_billing_employee_form.Location = new System.Drawing.Point(380, 400);
+            this.total_label_main_billing_employee_form.Location = new System.Drawing.Point(514, 457);
             this.total_label_main_billing_employee_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.total_label_main_billing_employee_form.Name = "total_label_main_billing_employee_form";
             this.total_label_main_billing_employee_form.Size = new System.Drawing.Size(60, 17);
@@ -324,19 +324,19 @@
             this.products_data_table_main_billing_employee_form.AllowUserToDeleteRows = false;
             this.products_data_table_main_billing_employee_form.AllowUserToResizeColumns = false;
             this.products_data_table_main_billing_employee_form.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.products_data_table_main_billing_employee_form.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.products_data_table_main_billing_employee_form.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.products_data_table_main_billing_employee_form.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.products_data_table_main_billing_employee_form.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.products_data_table_main_billing_employee_form.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.products_data_table_main_billing_employee_form.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.products_data_table_main_billing_employee_form.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.products_data_table_main_billing_employee_form.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.products_data_table_main_billing_employee_form.DoubleBuffered = true;
             this.products_data_table_main_billing_employee_form.EnableHeadersVisualStyles = false;
@@ -356,6 +356,7 @@
             this.products_data_table_main_billing_employee_form.ShowRowErrors = false;
             this.products_data_table_main_billing_employee_form.Size = new System.Drawing.Size(256, 205);
             this.products_data_table_main_billing_employee_form.TabIndex = 50;
+            this.products_data_table_main_billing_employee_form.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.products_data_table_main_billing_employee_form_CellContentClick);
             // 
             // panel1
             // 
@@ -376,6 +377,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 104);
             this.panel1.TabIndex = 47;
+            this.panel1.Visible = false;
             // 
             // remove_item_bill_tb
             // 
@@ -401,6 +403,7 @@
             this.remove_item_bill_tb.Size = new System.Drawing.Size(83, 46);
             this.remove_item_bill_tb.TabIndex = 35;
             this.remove_item_bill_tb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.remove_item_bill_tb.Click += new System.EventHandler(this.remove_item_bill_tb_Click);
             // 
             // product_id_text_box
             // 
@@ -446,19 +449,19 @@
             this.products_bill_data_table.AllowUserToDeleteRows = false;
             this.products_bill_data_table.AllowUserToResizeColumns = false;
             this.products_bill_data_table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.products_bill_data_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.products_bill_data_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.products_bill_data_table.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.products_bill_data_table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.products_bill_data_table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.products_bill_data_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.products_bill_data_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.products_bill_data_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.products_bill_data_table.DoubleBuffered = true;
             this.products_bill_data_table.EnableHeadersVisualStyles = false;
@@ -476,7 +479,7 @@
             this.products_bill_data_table.ShowCellToolTips = false;
             this.products_bill_data_table.ShowEditingIcon = false;
             this.products_bill_data_table.ShowRowErrors = false;
-            this.products_bill_data_table.Size = new System.Drawing.Size(236, 175);
+            this.products_bill_data_table.Size = new System.Drawing.Size(236, 205);
             this.products_bill_data_table.TabIndex = 54;
             // 
             // UC_Billing_emp

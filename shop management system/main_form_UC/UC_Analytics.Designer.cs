@@ -28,12 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Analytics));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.show_analytics_label = new System.Windows.Forms.Label();
+            this.duration_combo_box = new System.Windows.Forms.ComboBox();
+            this.ok_button = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.prompt_label = new System.Windows.Forms.Label();
+            this.shop_management_DBDataSet = new shop_management_system.shop_management_DBDataSet();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordersTableAdapter = new shop_management_system.shop_management_DBDataSetTableAdapters.ordersTableAdapter();
             this.main_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.shop_management_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.main_chart)).BeginInit();
             this.SuspendLayout();
+            // 
+            // show_analytics_label
+            // 
+            this.show_analytics_label.AutoSize = true;
+            this.show_analytics_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_analytics_label.Location = new System.Drawing.Point(219, 66);
+            this.show_analytics_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.show_analytics_label.Name = "show_analytics_label";
+            this.show_analytics_label.Size = new System.Drawing.Size(122, 17);
+            this.show_analytics_label.TabIndex = 1;
+            this.show_analytics_label.Text = "Show analytics for";
+            // 
+            // duration_combo_box
+            // 
+            this.duration_combo_box.FormattingEnabled = true;
+            this.duration_combo_box.Items.AddRange(new object[] {
+            "Last 7 days",
+            "Last Month",
+            "Last 6 Months",
+            "Last Year"});
+            this.duration_combo_box.Location = new System.Drawing.Point(340, 66);
+            this.duration_combo_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.duration_combo_box.Name = "duration_combo_box";
+            this.duration_combo_box.Size = new System.Drawing.Size(92, 21);
+            this.duration_combo_box.TabIndex = 2;
+            // 
+            // ok_button
+            // 
+            this.ok_button.ActiveBorderThickness = 1;
+            this.ok_button.ActiveCornerRadius = 20;
+            this.ok_button.ActiveFillColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ok_button.ActiveForecolor = System.Drawing.Color.White;
+            this.ok_button.ActiveLineColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ok_button.BackColor = System.Drawing.SystemColors.Control;
+            this.ok_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok_button.BackgroundImage")));
+            this.ok_button.ButtonText = "Ok";
+            this.ok_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ok_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ok_button.ForeColor = System.Drawing.Color.SeaGreen;
+            this.ok_button.IdleBorderThickness = 1;
+            this.ok_button.IdleCornerRadius = 20;
+            this.ok_button.IdleFillColor = System.Drawing.Color.MidnightBlue;
+            this.ok_button.IdleForecolor = System.Drawing.SystemColors.ControlLightLight;
+            this.ok_button.IdleLineColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ok_button.Location = new System.Drawing.Point(454, 59);
+            this.ok_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ok_button.Name = "ok_button";
+            this.ok_button.Size = new System.Drawing.Size(75, 33);
+            this.ok_button.TabIndex = 37;
+            this.ok_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
+            // 
+            // prompt_label
+            // 
+            this.prompt_label.AutoSize = true;
+            this.prompt_label.ForeColor = System.Drawing.Color.Red;
+            this.prompt_label.Location = new System.Drawing.Point(338, 102);
+            this.prompt_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prompt_label.Name = "prompt_label";
+            this.prompt_label.Size = new System.Drawing.Size(116, 13);
+            this.prompt_label.TabIndex = 38;
+            this.prompt_label.Text = "please select an option";
+            // 
+            // shop_management_DBDataSet
+            // 
+            this.shop_management_DBDataSet.DataSetName = "shop_management_DBDataSet";
+            this.shop_management_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "orders";
+            this.ordersBindingSource.DataSource = this.shop_management_DBDataSet;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
             // 
             // main_chart
             // 
@@ -41,32 +128,46 @@
             this.main_chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.main_chart.Legends.Add(legend1);
-            this.main_chart.Location = new System.Drawing.Point(244, 226);
+            this.main_chart.Location = new System.Drawing.Point(134, 175);
+            this.main_chart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.main_chart.Name = "main_chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.main_chart.Series.Add(series1);
-            this.main_chart.Size = new System.Drawing.Size(631, 328);
-            this.main_chart.TabIndex = 0;
-            this.main_chart.Text = "chart1";
-            this.main_chart.Click += new System.EventHandler(this.main_chart_Click);
+            this.main_chart.Size = new System.Drawing.Size(490, 244);
+            this.main_chart.TabIndex = 39;
+            this.main_chart.Text = "main_chart";
             // 
             // UC_Analytics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.main_chart);
+            this.Controls.Add(this.prompt_label);
+            this.Controls.Add(this.ok_button);
+            this.Controls.Add(this.duration_combo_box);
+            this.Controls.Add(this.show_analytics_label);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_Analytics";
-            this.Size = new System.Drawing.Size(959, 602);
+            this.Size = new System.Drawing.Size(719, 489);
             this.Load += new System.EventHandler(this.UC_Analytics_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.shop_management_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.main_chart)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label show_analytics_label;
+        private System.Windows.Forms.ComboBox duration_combo_box;
+        private Bunifu.Framework.UI.BunifuThinButton2 ok_button;
+        private System.Windows.Forms.Label prompt_label;
+        private System.Windows.Forms.BindingSource ordersBindingSource;
+        private shop_management_DBDataSet shop_management_DBDataSet;
+        private shop_management_DBDataSetTableAdapters.ordersTableAdapter ordersTableAdapter;
         private System.Windows.Forms.DataVisualization.Charting.Chart main_chart;
     }
 }

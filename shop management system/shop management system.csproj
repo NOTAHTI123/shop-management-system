@@ -227,6 +227,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customer_form UC\UC_customer_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer_form UC\UC_customer_dashboard.Designer.cs">
+      <DependentUpon>UC_customer_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_form UC\UC_customer_profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer_form UC\UC_customer_profile.Designer.cs">
+      <DependentUpon>UC_customer_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_form.Designer.cs">
+      <DependentUpon>customer_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="employee_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +262,12 @@
     </Compile>
     <Compile Include="forgot_password_form.Designer.cs">
       <DependentUpon>forgot_password_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_form_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_form_customer.Designer.cs">
+      <DependentUpon>login_form_customer.cs</DependentUpon>
     </Compile>
     <Compile Include="login_form_employee.cs">
       <SubType>Form</SubType>
@@ -319,6 +343,11 @@
     <Compile Include="reset_password_form.Designer.cs">
       <DependentUpon>reset_password_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="shop_management_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shop_management_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="signup_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +360,15 @@
     <Compile Include="signup_options_form.Designer.cs">
       <DependentUpon>signup_options_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="customer_form UC\UC_customer_dashboard.resx">
+      <DependentUpon>UC_customer_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_form UC\UC_customer_profile.resx">
+      <DependentUpon>UC_customer_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_form.resx">
+      <DependentUpon>customer_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employee_form.resx">
       <DependentUpon>employee_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forgot_password_form.resx">
       <DependentUpon>forgot_password_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_form_customer.resx">
+      <DependentUpon>login_form_customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login_form_employee.resx">
       <DependentUpon>login_form_employee.cs</DependentUpon>
@@ -401,6 +442,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="shop_management_DBDataSet.xsc">
+      <DependentUpon>shop_management_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="shop_management_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>shop_management_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="shop_management_DBDataSet.xss">
+      <DependentUpon>shop_management_DBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

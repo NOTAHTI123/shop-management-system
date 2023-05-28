@@ -187,6 +187,7 @@
             this.data_table_main_admin_form.RowTemplate.Height = 24;
             this.data_table_main_admin_form.Size = new System.Drawing.Size(705, 228);
             this.data_table_main_admin_form.TabIndex = 67;
+            this.data_table_main_admin_form.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_table_main_admin_form_CellContentClick);
             // 
             // add_button_main_admin_form
             // 
@@ -238,6 +239,7 @@
             this.delete_button_main_admin_form.Size = new System.Drawing.Size(133, 50);
             this.delete_button_main_admin_form.TabIndex = 65;
             this.delete_button_main_admin_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.delete_button_main_admin_form.Click += new System.EventHandler(this.delete_button_main_admin_form_Click);
             // 
             // edit_button_main_admin_form
             // 
@@ -263,6 +265,7 @@
             this.edit_button_main_admin_form.Size = new System.Drawing.Size(133, 50);
             this.edit_button_main_admin_form.TabIndex = 64;
             this.edit_button_main_admin_form.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.edit_button_main_admin_form.Click += new System.EventHandler(this.edit_button_main_admin_form_Click);
             // 
             // UC_admin
             // 

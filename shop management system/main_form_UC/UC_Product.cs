@@ -42,7 +42,7 @@ namespace shop_management_system
 
         private void add_button_main_employee_form_Click(object sender, EventArgs e)
         {
-            if (product_name_text_box_main_product_form.Text == "" || drop_down_menu_main_Customer_form.Text == "" || product_quantity_text_box_main_product_form.Text == "" || product_price_text_box_main_product_form.Text == "")
+            if (product_name_text_box_main_product_form.Text == "" || drop_down_menu_main_Customer_form.Text == "" || product_quantity_text_box_main_product_form.Text == "" || product_price_text_box_main_product_form.Text == "" || product_idtext_box_main_product_form.Text == "")
             {
                 MessageBox.Show("Please Fill out all the fields");
             }
@@ -51,15 +51,31 @@ namespace shop_management_system
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into product_tb ( product_name, product_category, product_quantity, product_price)values(@pname, @pcategory, @pquantity, @pprice)", con);
-                    cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
-                    cmd.Parameters.AddWithValue("@pname", product_name_text_box_main_product_form.Text);
-                    cmd.Parameters.AddWithValue("@pcategory", drop_down_menu_main_Customer_form.Text);
-                    cmd.Parameters.AddWithValue("@pquantity", product_quantity_text_box_main_product_form.Text);
-                    cmd.Parameters.AddWithValue("@pprice", product_price_text_box_main_product_form.Text);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Product added successfully");
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM product_tb WHERE product_id = '" + product_idtext_box_main_product_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+
+                        SqlCommand cmd = new SqlCommand("insert into product_tb ( product_name, product_category, product_quantity, product_price)values(@pname, @pcategory, @pquantity, @pprice)", con);
+                        cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
+                        cmd.Parameters.AddWithValue("@pname", product_name_text_box_main_product_form.Text);
+                        cmd.Parameters.AddWithValue("@pcategory", drop_down_menu_main_Customer_form.Text);
+                        cmd.Parameters.AddWithValue("@pquantity", product_quantity_text_box_main_product_form.Text);
+                        cmd.Parameters.AddWithValue("@pprice", product_price_text_box_main_product_form.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Product added successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The ID already exists");
+                    }
                     con.Close();
 
                     update_data_table();
@@ -75,7 +91,7 @@ namespace shop_management_system
 
         private void edit_button_main_employee_form_Click(object sender, EventArgs e)
         {
-            if (product_idtext_box_main_product_form.Text == "")
+            if (product_name_text_box_main_product_form.Text == "" || drop_down_menu_main_Customer_form.Text == "" || product_quantity_text_box_main_product_form.Text == "" || product_price_text_box_main_product_form.Text == "" || product_idtext_box_main_product_form.Text == "")
             {
                 MessageBox.Show("Please Enter all the details [Keeping the product id the same]");
             }
@@ -84,14 +100,31 @@ namespace shop_management_system
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("update product_tb set product_name = @pname, product_category = @pcategory, product_quantity = @pquantity where product_id=@pid", con);
-                    cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
-                    cmd.Parameters.AddWithValue("@pname", product_name_text_box_main_product_form.Text);
-                    cmd.Parameters.AddWithValue("@pcategory", drop_down_menu_main_Customer_form.Text);
-                    cmd.Parameters.AddWithValue("@pquantity", product_quantity_text_box_main_product_form.Text);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Products's data edited successfully");
+
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM product_tb WHERE product_id = '" + product_idtext_box_main_product_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd = new SqlCommand("update product_tb set product_name = @pname, product_category = @pcategory, product_quantity = @pquantity where product_id=@pid", con);
+                        cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
+                        cmd.Parameters.AddWithValue("@pname", product_name_text_box_main_product_form.Text);
+                        cmd.Parameters.AddWithValue("@pcategory", drop_down_menu_main_Customer_form.Text);
+                        cmd.Parameters.AddWithValue("@pquantity", product_quantity_text_box_main_product_form.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Products's data edited successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The ID is not found");
+                    }
                     con.Close();
 
                     update_data_table();
@@ -115,11 +148,28 @@ namespace shop_management_system
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("delete from product_tb  where product_id=@pid", con);
-                    cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Product's data deleted successfully");
+
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM product_tb WHERE product_id = '" + product_idtext_box_main_product_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd = new SqlCommand("delete from product_tb  where product_id=@pid", con);
+                        cmd.Parameters.AddWithValue("@pid", product_idtext_box_main_product_form.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Product's data deleted successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The ID is not found");
+                    }
                     con.Close();
 
                     update_data_table();

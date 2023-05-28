@@ -118,7 +118,9 @@ namespace shop_management_system
 
         private void login_customer_link_label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            login_form_customer lfc = new login_form_customer();
+            this.Hide(); 
+            lfc.Show();
         }
     }
 }

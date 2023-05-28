@@ -28,7 +28,7 @@ namespace shop_management_system
         private void update_data_table()
         {
             con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select employee_cnic, employee_name, employee_address, employee_dob from employee_tb", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from employee_tb", con);
             DataTable dt = new DataTable();
 
             sda.Fill(dt);
@@ -47,8 +47,8 @@ namespace shop_management_system
 
         private void add_button_main_employee_form_Click(object sender, EventArgs e)
         {
-            if (employee_idtext_box_main_employee_form.Text == "" || employee_phone_text_box_main_employee_form.Text == "")
-            {
+            if (employee_name_text_box_main_employee_form.Text != "" || employee_address_text_box_main_employee_form.Text != "" || password_text_box_main_employee_form.Text != "" || employee_email_text_box.Text != "" || employee_idtext_box_main_employee_form.Text != "" || employee_phone_text_box_main_employee_form.Text != "")
+            { 
                 MessageBox.Show("Please Fill out all the fields");
             }
 
@@ -60,26 +60,41 @@ namespace shop_management_system
 
                     //Insert in main table
 
-                    if(employee_name_text_box_main_employee_form.Text != "" || employee_address_text_box_main_employee_form.Text != "")
-                    {
+                    
+                    
 
-                        SqlCommand cmd = new SqlCommand("insert into employee_tb (employee_cnic, employee_name, employee_address, employee_dob, employee_password, employee_email)values(@eid, @ename, @eaddress, @edob, @epass, @email)", con);
-                        cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
-                        cmd.Parameters.AddWithValue("@ename", employee_name_text_box_main_employee_form.Text);
-                        cmd.Parameters.AddWithValue("@eaddress", employee_address_text_box_main_employee_form.Text);
-                        cmd.Parameters.AddWithValue("@edob", date_select_main_employee_form.Value);
-                        cmd.Parameters.AddWithValue("@epass", password_text_box_main_employee_form.Text);
-                        cmd.Parameters.AddWithValue("@email", employee_email_text_box.Text);
-                        cmd.ExecuteNonQuery();
-                    }
+                        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM employee_tb WHERE employee_cnic = '" + employee_idtext_box_main_employee_form.Text + "'", con);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
 
-                    SqlCommand cmd_2 = new SqlCommand("INSERT INTO employee_phone VALUES(@eid, @ephone)", con);
-                    cmd_2.Parameters.AddWithValue("@ephone", employee_phone_text_box_main_employee_form.Text);
-                    cmd_2.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+                        int cnt = int.Parse(dt.Rows[0][0].ToString());
 
-                    cmd_2.ExecuteNonQuery();
+                        if (cnt == 1)
+                        {
+                            MessageBox.Show("The CNIC already exists");
+                        }
+                        else
+                        {
 
-                    MessageBox.Show("Employee added successfully");
+                            SqlCommand cmd = new SqlCommand("insert into employee_tb (employee_cnic, employee_name, employee_address, employee_dob, employee_password, employee_email)values(@eid, @ename, @eaddress, @edob, @epass, @email)", con);
+                            cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+                            cmd.Parameters.AddWithValue("@ename", employee_name_text_box_main_employee_form.Text);
+                            cmd.Parameters.AddWithValue("@eaddress", employee_address_text_box_main_employee_form.Text);
+                            cmd.Parameters.AddWithValue("@edob", date_select_main_employee_form.Value);
+                            cmd.Parameters.AddWithValue("@epass", password_text_box_main_employee_form.Text);
+                            cmd.Parameters.AddWithValue("@email", employee_email_text_box.Text);
+                            cmd.ExecuteNonQuery();
+
+                            SqlCommand cmd_2 = new SqlCommand("INSERT INTO employee_phone VALUES(@eid, @ephone)", con);
+                            cmd_2.Parameters.AddWithValue("@ephone", employee_phone_text_box_main_employee_form.Text);
+                            cmd_2.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+
+                            cmd_2.ExecuteNonQuery();
+
+                            MessageBox.Show("Employee added successfully");
+                        }
+                    
+
                     con.Close();
 
                     update_data_table();
@@ -94,25 +109,41 @@ namespace shop_management_system
 
         private void edit_button_main_employee_form_Click(object sender, EventArgs e)
         {
-            if (employee_idtext_box_main_employee_form.Text == "")
+            if (employee_idtext_box_main_employee_form.Text == "" || employee_name_text_box_main_employee_form.Text != "" || employee_address_text_box_main_employee_form.Text != "" || password_text_box_main_employee_form.Text != "" || employee_email_text_box.Text != "")
             {
-                MessageBox.Show("Please Enter the Employee ID");
+                MessageBox.Show("Please fill all the fields");
             }
             else
             {
                 try
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("update employee_tb set employee_name = @ename, employee_address = @eaddress, employee_phone = @ephone, employee_password=@epass where employee_cnic=@eid", con);
-                    cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
-                    cmd.Parameters.AddWithValue("@ename", employee_name_text_box_main_employee_form.Text);
-                    cmd.Parameters.AddWithValue("@eaddress", employee_address_text_box_main_employee_form.Text);
-                    cmd.Parameters.AddWithValue("@ephone", employee_phone_text_box_main_employee_form.Text);
-                    cmd.Parameters.AddWithValue("@edob", date_select_main_employee_form.Value);
-                    cmd.Parameters.AddWithValue("@epass", password_text_box_main_employee_form.Text);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Employee's data edited successfully");
+                    con.Open();
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM employee_tb WHERE employee_cnic = '" + employee_idtext_box_main_employee_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd = new SqlCommand("update employee_tb set employee_name = @ename, employee_address = @eaddress, employee_password=@epass where employee_cnic=@eid", con);
+                        cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+                        cmd.Parameters.AddWithValue("@ename", employee_name_text_box_main_employee_form.Text);
+                        cmd.Parameters.AddWithValue("@eaddress", employee_address_text_box_main_employee_form.Text);
+                        cmd.Parameters.AddWithValue("@edob", date_select_main_employee_form.Value);
+                        cmd.Parameters.AddWithValue("@epass", password_text_box_main_employee_form.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Employee's data edited successfully");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("The CNIC entered not found");
+                    }
                     con.Close();
 
                     update_data_table();
@@ -136,20 +167,34 @@ namespace shop_management_system
                 try
                 {
                     con.Open();
-                    SqlCommand cmd_2 = new SqlCommand("delete from employee_phone  where employee_cnic=@eid", con);
-                    cmd_2.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
 
-                    cmd_2.ExecuteNonQuery();
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM employee_tb WHERE employee_cnic = '" + employee_idtext_box_main_employee_form.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    int cnt = int.Parse(dt.Rows[0][0].ToString());
+
+                    if (cnt == 1)
+                    {
+                        SqlCommand cmd_2 = new SqlCommand("delete from employee_phone  where employee_cnic=@eid", con);
+                        cmd_2.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+
+                        cmd_2.ExecuteNonQuery();
 
 
-                    SqlCommand cmd = new SqlCommand("delete from employee_tb  where employee_cnic=@eid", con);
-                    cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
+                        SqlCommand cmd = new SqlCommand("delete from employee_tb  where employee_cnic=@eid", con);
+                        cmd.Parameters.AddWithValue("@eid", employee_idtext_box_main_employee_form.Text);
 
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
 
 
-                    MessageBox.Show("Employee's data deleted successfully");
+                        MessageBox.Show("Employee's data deleted successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The CNIC not found");
+                    }
                     con.Close();
 
                     update_data_table();
@@ -164,18 +209,12 @@ namespace shop_management_system
 
         private void data_table_main_employee_form_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                employee_name_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[1].Value.ToString();
-                employee_address_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[2].Value.ToString();
-                password_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[5].Value.ToString();
-                employee_idtext_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[0].Value.ToString();
-                employee_phone_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[3].Value.ToString();
-            }
-            catch (Exception ex)
-            {
+            employee_name_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[0].Value.ToString();
+            employee_address_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[1].Value.ToString();
+            password_text_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[3].Value.ToString();
+            employee_idtext_box_main_employee_form.Text = data_table_main_employee_form.SelectedRows[0].Cells[4].Value.ToString();
+            employee_email_text_box.Text = data_table_main_employee_form.SelectedRows[0].Cells[5].Value.ToString();
 
-            }
         }
     }
 }

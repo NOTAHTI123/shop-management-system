@@ -1,3 +1,4 @@
-*Added email support for forgot password
-*Made a seperate form for reset password
-*Added authentication for forgot password
+*Solved the issue where you could alter customer_id while billing.
+*Customer login is working now.
+*Customer dashboard is showing transaction history now.
+*Updated total_bill_tb to show bill_date and employee_id (who billed it).

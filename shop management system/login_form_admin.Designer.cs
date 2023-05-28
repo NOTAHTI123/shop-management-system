@@ -48,10 +48,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.login_page_label);
-            this.panel1.Location = new System.Drawing.Point(-3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(139, 435);
+            this.panel1.Size = new System.Drawing.Size(185, 535);
             this.panel1.TabIndex = 14;
             // 
             // login_page_label
@@ -59,8 +59,7 @@
             this.login_page_label.AutoSize = true;
             this.login_page_label.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_page_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.login_page_label.Location = new System.Drawing.Point(39, 183);
-            this.login_page_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.login_page_label.Location = new System.Drawing.Point(52, 225);
             this.login_page_label.Name = "login_page_label";
             this.login_page_label.Size = new System.Drawing.Size(58, 20);
             this.login_page_label.TabIndex = 5;
@@ -73,10 +72,10 @@
             this.admin_button_login_form.IconChar = FontAwesome.Sharp.IconChar.None;
             this.admin_button_login_form.IconColor = System.Drawing.Color.Black;
             this.admin_button_login_form.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.admin_button_login_form.Location = new System.Drawing.Point(277, 231);
-            this.admin_button_login_form.Margin = new System.Windows.Forms.Padding(2);
+            this.admin_button_login_form.Location = new System.Drawing.Point(369, 284);
+            this.admin_button_login_form.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.admin_button_login_form.Name = "admin_button_login_form";
-            this.admin_button_login_form.Size = new System.Drawing.Size(79, 33);
+            this.admin_button_login_form.Size = new System.Drawing.Size(105, 41);
             this.admin_button_login_form.TabIndex = 20;
             this.admin_button_login_form.Text = "Login";
             this.admin_button_login_form.UseVisualStyleBackColor = false;
@@ -84,19 +83,18 @@
             // 
             // password_textbox_login_form
             // 
-            this.password_textbox_login_form.Location = new System.Drawing.Point(263, 184);
-            this.password_textbox_login_form.Margin = new System.Windows.Forms.Padding(2);
+            this.password_textbox_login_form.Location = new System.Drawing.Point(351, 226);
+            this.password_textbox_login_form.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password_textbox_login_form.Name = "password_textbox_login_form";
             this.password_textbox_login_form.PasswordChar = '*';
-            this.password_textbox_login_form.Size = new System.Drawing.Size(114, 20);
+            this.password_textbox_login_form.Size = new System.Drawing.Size(151, 22);
             this.password_textbox_login_form.TabIndex = 18;
             // 
             // password_label_login_form
             // 
             this.password_label_login_form.AutoSize = true;
             this.password_label_login_form.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_label_login_form.Location = new System.Drawing.Point(175, 186);
-            this.password_label_login_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.password_label_login_form.Location = new System.Drawing.Point(233, 229);
             this.password_label_login_form.Name = "password_label_login_form";
             this.password_label_login_form.Size = new System.Drawing.Size(68, 15);
             this.password_label_login_form.TabIndex = 17;
@@ -104,18 +102,17 @@
             // 
             // cnic_textbox_login_form
             // 
-            this.cnic_textbox_login_form.Location = new System.Drawing.Point(263, 125);
-            this.cnic_textbox_login_form.Margin = new System.Windows.Forms.Padding(2);
+            this.cnic_textbox_login_form.Location = new System.Drawing.Point(351, 154);
+            this.cnic_textbox_login_form.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cnic_textbox_login_form.Name = "cnic_textbox_login_form";
-            this.cnic_textbox_login_form.Size = new System.Drawing.Size(114, 20);
+            this.cnic_textbox_login_form.Size = new System.Drawing.Size(151, 22);
             this.cnic_textbox_login_form.TabIndex = 16;
             // 
             // username_label_login_form
             // 
             this.username_label_login_form.AutoSize = true;
             this.username_label_login_form.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_label_login_form.Location = new System.Drawing.Point(175, 128);
-            this.username_label_login_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.username_label_login_form.Location = new System.Drawing.Point(233, 158);
             this.username_label_login_form.Name = "username_label_login_form";
             this.username_label_login_form.Size = new System.Drawing.Size(44, 15);
             this.username_label_login_form.TabIndex = 15;
@@ -130,10 +127,9 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabel2.Location = new System.Drawing.Point(268, 326);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(357, 401);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(92, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(116, 16);
             this.linkLabel2.TabIndex = 22;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Forgot Password?";
@@ -143,10 +139,9 @@
             // 
             this.signup_label.AutoSize = true;
             this.signup_label.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.signup_label.Location = new System.Drawing.Point(240, 295);
-            this.signup_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.signup_label.Location = new System.Drawing.Point(320, 363);
             this.signup_label.Name = "signup_label";
-            this.signup_label.Size = new System.Drawing.Size(158, 13);
+            this.signup_label.Size = new System.Drawing.Size(191, 16);
             this.signup_label.TabIndex = 21;
             this.signup_label.TabStop = true;
             this.signup_label.Text = "Don\'t have an account? Signup";
@@ -156,22 +151,21 @@
             // 
             this.login_customer_link_label.AutoSize = true;
             this.login_customer_link_label.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.login_customer_link_label.Location = new System.Drawing.Point(265, 408);
-            this.login_customer_link_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.login_customer_link_label.Location = new System.Drawing.Point(353, 502);
             this.login_customer_link_label.Name = "login_customer_link_label";
-            this.login_customer_link_label.Size = new System.Drawing.Size(94, 13);
+            this.login_customer_link_label.Size = new System.Drawing.Size(118, 16);
             this.login_customer_link_label.TabIndex = 24;
             this.login_customer_link_label.TabStop = true;
             this.login_customer_link_label.Text = "Login as Customer";
+            this.login_customer_link_label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_customer_link_label_LinkClicked);
             // 
             // login_employee_link_label
             // 
             this.login_employee_link_label.AutoSize = true;
             this.login_employee_link_label.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.login_employee_link_label.Location = new System.Drawing.Point(264, 384);
-            this.login_employee_link_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.login_employee_link_label.Location = new System.Drawing.Point(352, 473);
             this.login_employee_link_label.Name = "login_employee_link_label";
-            this.login_employee_link_label.Size = new System.Drawing.Size(96, 13);
+            this.login_employee_link_label.Size = new System.Drawing.Size(123, 16);
             this.login_employee_link_label.TabIndex = 23;
             this.login_employee_link_label.TabStop = true;
             this.login_employee_link_label.Text = "Login as Employee";
@@ -179,9 +173,9 @@
             // 
             // login_form_admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 436);
+            this.ClientSize = new System.Drawing.Size(743, 537);
             this.Controls.Add(this.login_customer_link_label);
             this.Controls.Add(this.login_employee_link_label);
             this.Controls.Add(this.panel1);
@@ -193,6 +187,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.signup_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "login_form_admin";
             this.Text = "login_form_admin";
             this.Load += new System.EventHandler(this.login_form_admin_Load);

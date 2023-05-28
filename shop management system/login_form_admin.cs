@@ -58,8 +58,8 @@ namespace shop_management_system
 
                         if (password_textbox_login_form.Text == real_password)
                         {
-                            main_form mf = new main_form(cnic_textbox_login_form.Text);
-                            mf.Show();
+                            customer_form cf = new customer_form(cnic_textbox_login_form.Text);
+                            cf.Show();
                             this.Hide();
                         }
 
@@ -101,6 +101,13 @@ namespace shop_management_system
             signup_form sf = new signup_form();
             this.Hide();
             sf.Show();
+        }
+
+        private void login_customer_link_label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            login_form_customer lfc = new login_form_customer();
+            this.Hide();
+            lfc.Show();
         }
     }
 }

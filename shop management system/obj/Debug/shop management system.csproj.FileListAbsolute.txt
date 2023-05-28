@@ -60,3 +60,7 @@ C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management s
 C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.login_form_employee.resources
 C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.login_form_admin.resources
 C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.main_form_UC.UC_admin.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.customer_form_UC.UC_customer_profile.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.customer_form.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.login_form_customer.resources
+C:\Users\ahtis\OneDrive\Desktop\UNI\shop management system 2.0\shop management system\shop management system\obj\Debug\shop_management_system.customer_form_UC.UC_customer_dashboard.resources

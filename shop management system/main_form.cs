@@ -57,7 +57,7 @@ namespace shop_management_system
 
 
             //The following code is to automatically open dashboard user control on login
-            UserControl ucprofile = new UC_admin_profile();
+            UserControl ucprofile = new UC_admin_profile(cnic, profile_button.Text);
             addUserControl(ucprofile);
             ActivateButton(profile_button, RGBColors.color1);
             //
@@ -228,6 +228,16 @@ namespace shop_management_system
             UC_admin uca = new UC_admin();
             ActivateButton(sender, RGBColors.color5);
             addUserControl(uca);
+        }
+
+        private void main_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void main_button_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void top_panel_Paint(object sender, PaintEventArgs e)
