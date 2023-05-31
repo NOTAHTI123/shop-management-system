@@ -91,5 +91,19 @@ namespace shop_management_system
             this.Hide();
             lfa.Show();
         }
+
+        private void signup_label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            signup_form sf = new signup_form();
+            sf.Show();
+            //this.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgot_password_form fp = new forgot_password_form();
+            //this.Hide();
+            fp.Show();
+        }
     }
 }

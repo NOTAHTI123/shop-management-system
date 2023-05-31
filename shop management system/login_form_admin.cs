@@ -58,7 +58,7 @@ namespace shop_management_system
 
                         if (password_textbox_login_form.Text == real_password)
                         {
-                            customer_form cf = new customer_form(cnic_textbox_login_form.Text);
+                            main_form cf = new main_form(cnic_textbox_login_form.Text);
                             cf.Show();
                             this.Hide();
                         }

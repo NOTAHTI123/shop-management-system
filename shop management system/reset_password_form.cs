@@ -43,11 +43,18 @@ namespace shop_management_system
                 sda.Fill(dt);
 
             }
-            else
+            else if(current_reset_acc_type == "admin")
             {
 
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT verification_code FROM forgot_password_tb where admin_cnic = '" + cnic_value_label.Text + "'", con);
                 
+                sda.Fill(dt);
+            }
+
+            else if(current_reset_acc_type == "customer")
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT verification_code FROM forgot_password_tb where customer_cnic = '" + cnic_value_label.Text + "'", con);
+
                 sda.Fill(dt);
             }
 
@@ -89,7 +96,7 @@ namespace shop_management_system
 
                 }
 
-                else
+                else if(current_reset_acc_type == "admin")
                 {
 
                     SqlCommand cmd = new SqlCommand("UPDATE admin_tb SET admin_password = @pass WHERE admin_cnic = @cnic", con);
@@ -99,6 +106,21 @@ namespace shop_management_system
 
 
                     SqlCommand cmd2 = new SqlCommand("DELETE from forgot_password_tb where admin_cnic =  @cnic");
+                    cmd2.Parameters.AddWithValue("@cnic", cnic_value_label.Text);
+                    cmd2.Connection = con;
+
+                    cmd2.ExecuteNonQuery();
+                }
+
+                else if(current_reset_acc_type == "customer")
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE customer_tb SET customer_password = @pass WHERE customer_cnic = @cnic", con);
+                    cmd.Parameters.AddWithValue("@pass", new_password_text_box.Text);
+                    cmd.Parameters.AddWithValue("@cnic", cnic_value_label.Text);
+                    cmd.ExecuteNonQuery();
+
+
+                    SqlCommand cmd2 = new SqlCommand("DELETE from forgot_password_tb where customer_cnic =  @cnic");
                     cmd2.Parameters.AddWithValue("@cnic", cnic_value_label.Text);
                     cmd2.Connection = con;
 

@@ -14,17 +14,25 @@ namespace shop_management_system
     public partial class UC_Analytics : UserControl
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-J7GK37B;Initial Catalog=shop_management_DB;Integrated Security=True");
+        bool update_or_not = true;
 
         public UC_Analytics()
         {
             InitializeComponent();
 
+            timer1.Interval = 4000;
+
             prompt_label.Visible = false;
             //chart
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select product_id, quantity from orders", con);
+            initialize_chart();
+        }
 
-            DataSet ds  = new DataSet();
+        private void initialize_chart()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("Select product_id, SUM(quantity) AS quantity from orders GROUP BY product_id", con);
+
+            DataSet ds = new DataSet();
             sda.Fill(ds);
 
             main_chart.DataSource = ds.Tables[0];
@@ -33,7 +41,17 @@ namespace shop_management_system
             main_chart.Series["Sales"].XValueMember = "product_id";
             main_chart.Series["Sales"].YValueMembers = "quantity";
         }
+        private void update_chart()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("Select product_id, SUM(quantity) AS quantity from orders GROUP BY product_id", con);
 
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+
+            main_chart.DataSource = ds.Tables[0];
+            main_chart.DataBind();
+            //chart
+        }
         private void UC_Analytics_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +64,7 @@ namespace shop_management_system
 
         private void ok_button_Click(object sender, EventArgs e)
         {
-            if(duration_combo_box.Text == "")
+            if (duration_combo_box.Text == "")
             {
                 prompt_label.Visible = true;
             }
@@ -58,19 +76,19 @@ namespace shop_management_system
                     DateTime dt_now = DateTime.Now;
                     if (duration_combo_box.SelectedIndex == 0)
                     {
-                        dt_now = dt_now.AddDays(-1);
+                        dt_now = dt_now.AddDays(-7);
                         string lower_date = dt_now.ToShortDateString();
 
 
                         SqlDataAdapter sda_final = new SqlDataAdapter("SELECT product_id, SUM(quantity) AS quantity FROM orders WHERE bill_date BETWEEN + '" + lower_date + "' AND CURRENT_TIMESTAMP GROUP BY product_id", con);
-                        
+
 
                         DataSet ds = new DataSet();
                         sda_final.Fill(ds);
 
                         main_chart.DataSource = ds;
                         main_chart.DataBind();
-
+                        update_or_not = false;
                     }
 
                     else if (duration_combo_box.SelectedIndex == 1)
@@ -85,10 +103,11 @@ namespace shop_management_system
 
                         main_chart.DataSource = ds;
                         main_chart.DataBind();
+                        update_or_not = false;
 
                     }
 
-                    else if(duration_combo_box.SelectedIndex == 2)
+                    else if (duration_combo_box.SelectedIndex == 2)
                     {
                         DateTime dt_lower = dt_now.AddMonths(-6);
 
@@ -100,6 +119,7 @@ namespace shop_management_system
 
                         main_chart.DataSource = ds;
                         main_chart.DataBind();
+                        update_or_not = false;
                     }
 
                     else if (duration_combo_box.SelectedIndex == 3)
@@ -114,6 +134,7 @@ namespace shop_management_system
 
                         main_chart.DataSource = ds;
                         main_chart.DataBind();
+                        update_or_not = true;
                     }
 
                     con.Close();
@@ -123,6 +144,14 @@ namespace shop_management_system
                     MessageBox.Show(ex.Message);
                     con.Close();
                 }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e) //auto update chart
+        {
+            if(update_or_not == true)
+            {
+                update_chart();
             }
         }
     }
